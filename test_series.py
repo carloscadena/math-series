@@ -18,6 +18,7 @@ def test_fibonacci(n, result):
     assert fibonacci(n) == result
 
 
+@pytest.mark.parametrize("n, result", lucas_params_table)
 def test_lucas(n, result):
     from series import lucas
     assert lucas(n) == result
