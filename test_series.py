@@ -29,6 +29,6 @@ def test_lucas(n, result):
 
 
 @pytest.mark.parametrize("n, a, b, result", sum_series_table)
-def sum_series(n, a, b, result):
+def test_sum_series(n, a, b, result):
     from series import sum_series
     assert sum_series(n, a, b) == result

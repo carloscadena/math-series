@@ -25,6 +25,23 @@ def lucas(num):
     return lucas(num - 1) + lucas(num - 2)
 
 
+def sum_series(n_th_element, a=0, b=1):
+    """
+    return the nth number of the series starting with value in a and b
+    """
+    if a == 0 and b == 1:
+        return fibonacci(n_th_element)
+    if a == 2 and b == 1:
+        return lucas(n_th_element)
+    if n_th_element == 1:
+        return a
+    if n_th_element == 2:
+        return b
+
+    return sum_series(n_th_element-2, a, b) + sum_series(n_th_element-1, a, b)
+
+
 if __name__ == '__main__':
     lucas()
     fibonacci()
+    sum_series()
