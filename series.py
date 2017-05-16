@@ -3,11 +3,15 @@ Math Series: Fibonacci and Lucas Numbers
 """
 
 
-def fibonacci(num=5):
+def fibonacci(num):
     """
     returns the nth number in the Fibonacci sequence
     """
-    # do stuff
+    if num == 0 or num == 1:
+        return 0
+    if num == 2:
+        return 1
+    return fibonacci(num - 1) + fibonacci(num - 2)
     return ""
 
 
